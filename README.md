@@ -132,4 +132,4 @@ app.bad_request(
 
 ## License
 
-**Phoon** is released into the **Public Domain**. 🎉🍻
+**Phoon** is released under **GPLv3**. 🎉🍻

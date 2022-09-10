@@ -4,7 +4,7 @@
 A web framework inspired by [ExpressJS](https://expressjs.com/).
 
 
-[![Build Status](https://api.travis-ci.org/ducdetronquito/phoon.svg?branch=master)](https://travis-ci.org/ducdetronquito/phoon) [![License]
+[![Build Status](https://api.travis-ci.org/ducdetronquito/phoon.svg?branch=master)](https://travis-ci.org/ducdetronquito/phoon)
 
 ## Usage
 

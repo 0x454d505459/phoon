@@ -1,10 +1,6 @@
 from asynchttpserver import nil
-import asyncdispatch
-import httpcore
-import options
-import phoon/context/[context, request, response]
-import phoon/routing/[errors, route, router, tree]
-
+import asyncdispatch except Callback
+import httpcore, options, phoon/context/[context, request, response], phoon/routing/[errors, route, router, tree]
 
 type
     App* = ref object
@@ -16,14 +12,17 @@ type
 
 proc default_bad_request_callback(ctx: Context) {.async.} =
     ctx.response.status(Http500)
+    .body("Bad request")
 
 
 proc default_not_found_callback(ctx: Context) {.async.} =
     ctx.response.status(Http404)
+    .body("Not found")
 
 
 proc default_method_not_allowed_callback(ctx: Context) {.async.} =
     ctx.response.status(Http405)
+    .body("Method not allowed")
 
 
 proc new*(app_type: type[App]): App =
@@ -150,13 +149,5 @@ proc serve*(self: App, port: int, address: string = "") =
 proc serve*(self: App) =
     self.serve(8080)
 
-
-export asyncdispatch
-export context
-export errors
-export httpcore
-export request
+export asyncdispatch, context, errors, httpcore, request, route, router, tree
 export response except compile
-export route
-export router
-export tree

@@ -8,7 +8,7 @@ license       = "GPLv3"
 srcDir = "src"
 skipDirs = @["benchmark", "tests"]
 
-requires "nim >= 1.6.x"
+requires "nim >= 1.6.0"
 
 task integration, "Runs the integration test suite.":
   exec "nim c -r tests/integration/test_simple_server.nim"
